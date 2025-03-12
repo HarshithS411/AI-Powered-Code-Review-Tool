@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Code Review Tool</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="/static/highlight.css">
+</head>
+<body>
+    <main>
+        <div class="left">
+            <div class="code">
+                <textarea id="code-editor" placeholder="Write or paste your code here...">function sum() {
+  return 1 + 1
+}</textarea>
+                <pre id="highlight-output" class="language-javascript" style="display: none;"></pre>
+            </div>
+            <div id="review-btn" class="review">Review</div>
+        </div>
+        <div class="right" id="review-output"></div>
+    </main>
+    <script src="/static/prism.min.js"></script>
+    <script src="/static/marked.min.js"></script>
+    <script src="/static/highlight.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
