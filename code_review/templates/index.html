@@ -12,12 +12,14 @@
     <main>
         <div class="left">
             <div class="code">
-                <textarea id="code-editor" placeholder="Write or paste your code here...">function sum() {
-  return 1 + 1
-}</textarea>
+                <textarea id="code-editor" placeholder="Write any programming language or paste your code here..."></textarea>
                 <pre id="highlight-output" class="language-javascript" style="display: none;"></pre>
             </div>
-            <div id="review-btn" class="review">Review</div>
+            <div class="controls">
+                <input type="file" id="file-upload" accept=".js,.py,.cpp,.java,.txt,.c">
+                <button id="review-btn" class="review">Review</button>
+                <button id="clear-btn" class="clear">Clear</button>
+            </div>
         </div>
         <div class="right" id="review-output"></div>
     </main>

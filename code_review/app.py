@@ -103,7 +103,7 @@ def index():
         if not code:
             return jsonify({"error": "Prompt is required"}), 400
         
-        # Call Gemini API
+        print("Received code for review:", code) # Debug print
         result = model.generate_content(code)
         return result.text
 

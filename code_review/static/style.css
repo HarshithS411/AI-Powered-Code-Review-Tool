@@ -25,10 +25,19 @@ main .left, main .right {
 
 main .left {
     background-color: #000000;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.left .code, .code textarea, .code pre {
+.left .code {
+    flex: 1; /* Take up remaining space */
+    width: 100%;
+    margin: 0;
+    border-radius: 0.7rem;
+    background-color: #0c0c0c;
+}
+
+.code textarea, .code pre {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -41,17 +50,57 @@ main .left {
     color: #fff;
 }
 
+.left .controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+}
+
+.left #file-upload {
+    padding: 5px;
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.left #file-upload:hover {
+    background-color: #3a3a3a;
+}
+
 main .left .review {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
     background-color: rgb(219, 219, 255);
     color: #000000;
     padding: 0.5rem 2rem;
     font-weight: 500;
-    cursor: pointer;
-    user-select: none;
+    border: none;
     border-radius: 0.7rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+main .left .review:hover {
+    background-color: rgb(200, 200, 255);
+}
+
+main .left .clear {
+    background-color: #ff6666; /* Light red background */
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+main .left .clear:hover {
+    background-color: #ff4d4d; /* Darker red on hover */
 }
 
 main .right {
