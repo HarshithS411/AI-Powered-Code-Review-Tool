@@ -1,0 +1,157 @@
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background: #252526;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    color: #00bcd4;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.editor-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-section, .output-section, .control-section {
+    width: 100%;
+}
+
+.language-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.code-editor, #output-code {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    background: #333;
+    color: white;
+    resize: vertical;
+    margin-top: 10px;
+    white-space: pre-wrap; /* Ensure line breaks are preserved */
+    overflow-x: auto; /* Add horizontal scroll if content overflows */
+}
+
+select, button, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    background: #333;
+    color: white;
+    font-size: 16px;
+}
+
+.control-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#convert-btn {
+    background: #00bcd4;
+    cursor: pointer;
+    margin-top: 15px;
+    border: none;
+    width: 100%;
+    max-width: 200px;
+}
+
+button:hover {
+    background: #0097a7;
+}
+
+input[type="file"] {
+    cursor: pointer;
+    background: #444;
+    border: 1px solid #555;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background: #00bcd4;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: #0097a7;
+}
+
+.output-section {
+    margin-top: 20px;
+}
+
+#copy-btn, #download-btn {
+    background: #00bcd4;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#copy-btn:hover, #download-btn:hover {
+    background: #0097a7;
+}
+
+#status {
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* Prism.js adjustments */
+pre {
+    text-align: left;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Ensure horizontal scrolling if needed */
+    white-space: pre-wrap; /* Preserve line breaks and wrap long lines */
+    margin: 0; /* Remove default margin to prevent overlap */
+}
+
+pre code {
+    color: #ffffff;
+    display: block; /* Ensure code block behaves as a block element */
+}

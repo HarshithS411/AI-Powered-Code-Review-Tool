@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Converter</title>
+    <link rel="stylesheet" href="/static/code_converter_index.css">
+    <link rel="stylesheet" href="/static/libs/prism.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Programming Language Converter</h1>
+        
+        <div class="editor-section">
+            <div class="language-selection">
+                <div>
+                    <label for="source-lang">Source Language:</label>
+                    <select id="source-lang">
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="java">Java</option>
+                        <option value="js">JavaScript</option>
+                        <option value="python">Python</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="target-lang">Target Language:</label>
+                    <select id="target-lang">
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="java">Java</option>
+                        <option value="js">JavaScript</option>
+                        <option value="python">Python</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <textarea id="input-code" class="code-editor" placeholder="Enter your code here..."></textarea>
+                <input type="file" id="file-upload" accept=".c,.cpp,.java,.js,.py,.txt">
+            </div>
+
+            <div class="control-section">
+                <button id="convert-btn">Convert</button>
+            </div>
+
+            <div class="output-section">
+                <h3>Converted Code:</h3>
+                <pre><code id="output-code" class="language-none"></code></pre>
+                <button id="copy-btn">Copy to Clipboard</button>
+                <button id="download-btn">Download</button>
+                <p id="status"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/libs/prism.js"></script>
+    <script src="/static/code_converter_script.js"></script>
+</body>
+</html>
